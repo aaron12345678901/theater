@@ -6,7 +6,7 @@ if (!preg_match('/^[a-zA-Z0-9]+$/', $_POST['username'])) {
 }
 // Password must be between 5 and 20 characters long.
 if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
-    exit('Passsword must be between 5 and 20 characters long!');
+    exit('Password must be between 5 and 20 characters long!');
 }
 // We need to check if the account with that username exists.
 $stmt = $conn->prepare('SELECT id, password FROM theatre.users WHERE username = ? ');
