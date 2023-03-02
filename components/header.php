@@ -5,6 +5,7 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
     define('ROOT_DIR', 'http://localhost:8040/theater/');
+    define('AUTH_DIR', 'http://localhost:8040//theater/account/dashboard/');
 ?>
 <!doctype html>
 <html lang="en">
@@ -39,6 +40,8 @@
     <title>Navigation Blog With Dropdown + Search and Logo by okthapian. </title>
 
         <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="<?= ROOT_DIR ?>assets/scss/app.css">
+
     </head>
 <body class="bg-gray-200">
 

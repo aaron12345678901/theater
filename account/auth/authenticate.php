@@ -51,3 +51,4 @@ if ($stmt = $conn->prepare('SELECT id, password, is_admin FROM theatre.users WHE
 
 
 }
+
