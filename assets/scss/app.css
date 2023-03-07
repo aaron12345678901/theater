@@ -11,4 +11,29 @@
 /* When input gains focus, add a blue border below it */
 #searchInput:focus {
   border-bottom: 2px solid #4575b6;
+}
+
+#delete_modal {
+  display: none;
+}
+
+.delete-show {
+  display: flex !important;
+}
+
+.blog-content {
+  overflow: hidden;
+  max-height: 8rem;
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+}
+
+pre {
+  display: block;
+  font-family: inherit !important;
+  white-space: pre-line;
+  margin: 1em 0;
 }/*# sourceMappingURL=app.css.map */

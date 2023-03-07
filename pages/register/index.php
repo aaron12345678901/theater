@@ -1,6 +1,6 @@
 <?php 
-    include '../components/header.php';
-    include '../components/navigation.php';
+    include '../../components/header.php';
+    include '../../components/navigation.php';
 ?>
 
 <div class="min-w-screen min-h-screen bg-gray-900 flex items-center justify-center px-5 py-5">
@@ -14,7 +14,7 @@
                     <h1 class="font-bold text-3xl text-gray-900">REGISTER</h1>
                     <p>Enter your information to register</p>
                 </div>
-                <form action="../account/auth/register.php" method="post">
+                <form action="../../account/auth/register.php" method="post">
                
                 <div>
                     <div class="flex -mx-3">
@@ -64,4 +64,4 @@
 </div>    
     
     
-<?php include '../components/footer.php'; ?>
+<?php include '../../components/footer.php'; ?>

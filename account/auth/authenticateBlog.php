@@ -3,6 +3,7 @@
 // We need to use sessions, so you should always start sessions using the below code.
 require 'dbConfig.php';
 session_start();
+$blogID = $_GET['blogID'];
 
 // Now we check if the data from the login form was submitted, isset() will check if the data exists.
 if (!isset($_POST['username'], $_POST['password'])) {
@@ -34,10 +35,10 @@ if ($stmt = $conn->prepare('SELECT id, password, is_admin FROM theatre.users WHE
             $_SESSION['id'] = $id;
             $_SESSION['is_admin'] = $admin;
             if ($admin == 1) {
-                header('Location: ../dashboard/admin/');
+                header("Location: ../../blog/details?blogID'.$blogID.' ");
             }
             else{
-                header('Location: ../dashboard/user/');
+                header("Location: ../../blog/details?blogID'.$blogID.' ");
             }
             exit();
 
