@@ -33,4 +33,4 @@ if ($stmt->num_rows > 0) {
 
 }
 
-header('Location: ../../login/');
+header('Location: ../../pages/login/');

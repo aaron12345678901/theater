@@ -39,7 +39,7 @@ FROM comments c
 LEFT JOIN userBlog ub ON c.fk_userBlog = ub.id
 LEFT JOIN blog b ON ub.fk_blog_id = b.id
 LEFT JOIN users u ON ub.fk_user_id = u.id
-where ub.fk_blog_id= '. $blogID .'
+where ub.fk_blog_id= '. $blogID .' AND c.pending = 0
 
 ');
 $comments->execute();
@@ -191,7 +191,7 @@ $comments->bind_result($cID, $cHeading, $comment, $cDateAdded, $pending, $userna
         <h4 class="text-4xl font-bold text-gray-800 tracking-widest uppercase text-center">Comments</h4>
         <div class="space-y-12 px-2 xl:px-16 mt-12">
             <hr>
-            <?php if($comments->num_rows > 0 && $pending == 0): ?>
+            <?php if($comments->num_rows > 0 ): ?>
                 <?php while ($comments->fetch()): ?>
                 <div class="mt-4 flex">
                     <div>
