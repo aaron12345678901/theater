@@ -14,7 +14,7 @@
                     <h1 class="font-bold text-3xl text-gray-900">REGISTER</h1>
                     <p>Enter your information to register</p>
                 </div>
-                <form action="../../account/auth/register.php" method="post">
+                <form action="account/auth/register.php" method="post">
                
                 <div>
                     <div class="flex -mx-3">

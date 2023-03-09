@@ -1,0 +1,18 @@
+RewriteEngine On
+
+# Main Navigation
+# This will show a number but it will not give away the column name in your table
+# To have cleaner URL's is is better to use a framework
+
+
+RewriteRule ^blogDetails/([0-9]+)$ pages/blog/details.php?blog_id=$1 [L]
+RewriteRule ^login$ pages/login/ [L]
+RewriteRule ^register$ pages/register/ [L]
+RewriteRule ^blogs$ pages/blog/ [L]
+
+# User Navigation
+RewriteRule ^u/dashboard$ account/dashboard/user/index.php [L]
+
+
+#Admin Navigation
+RewriteRule ^a/dashboard$ account/dashboard/admin/index.php [L]

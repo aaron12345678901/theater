@@ -33,7 +33,8 @@ c.heading,
 c.comment,
 c.date_added,
 c.pending,
-u.username
+u.username,
+u.active
 
 FROM comments c
 LEFT JOIN userBlog ub ON c.fk_userBlog = ub.id
@@ -44,7 +45,7 @@ where ub.fk_blog_id= '. $blogID .' AND c.pending = 0
 ');
 $comments->execute();
 $comments->store_result();
-$comments->bind_result($cID, $cHeading, $comment, $cDateAdded, $pending, $username);
+$comments->bind_result($cID, $cHeading, $comment, $cDateAdded, $pending, $username, $active);
 ?>
 
 <section class="bg-white dark:bg-gray-900">
@@ -191,8 +192,9 @@ $comments->bind_result($cID, $cHeading, $comment, $cDateAdded, $pending, $userna
         <h4 class="text-4xl font-bold text-gray-800 tracking-widest uppercase text-center">Comments</h4>
         <div class="space-y-12 px-2 xl:px-16 mt-12">
             <hr>
-            <?php if($comments->num_rows > 0 ): ?>
                 <?php while ($comments->fetch()): ?>
+                    <?php if($comments->num_rows > 0 && $active == 1): ?>
+
                 <div class="mt-4 flex">
                     <div>
                         <p>Comment by: <?= $username?> On: <?= $cDateAdded ?> </p>
@@ -205,10 +207,11 @@ $comments->bind_result($cID, $cHeading, $comment, $cDateAdded, $pending, $userna
                     </div>
                 </div>
             <hr>
-            <?php endwhile ?>
-            <?php else: ?>
-                <p class="mb-4 text-sm text-gray-700">There are no comments for this show yet</p>
+            <?php endif ?>
 
+            <?php endwhile ?>
+            <?php if($comments->num_rows < 1): ?>
+                <p class="mb-4 text-sm text-gray-700">There are no comments for this show yet</p>
             <?php endif ?>
         </div>
     </div>

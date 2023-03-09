@@ -34,10 +34,10 @@ if ($stmt = $conn->prepare('SELECT id, password, is_admin FROM theatre.users WHE
             $_SESSION['id'] = $id;
             $_SESSION['is_admin'] = $admin;
             if ($admin == 1) {
-                header('Location: ../dashboard/admin/');
+                header('Location: ../../a/dashboard');
             }
             else{
-                header('Location: ../dashboard/user/');
+                header('Location: ../../u/dashboard');
             }
             exit();
 

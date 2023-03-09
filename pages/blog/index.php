@@ -83,7 +83,7 @@ echo $blogID;
           <div class="mt-3 flex items-end justify-between">
             <div class="flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600">
              
-            <button onclick="window.location.href='details.php?blog_id=<?= $blogID ?>';" class="text-sm">READ MORE...</button>
+            <button onclick="window.location.href='blogDetails/<?= $blogID ?>';" class="text-sm">READ MORE...</button>
 
             </div>
           </div>
