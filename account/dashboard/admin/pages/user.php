@@ -31,16 +31,11 @@ $users->bind_result($userId, $userName, $userEmail, $userActive, $admin);
 	<!--Responsive Extension Datatables CSS-->
 	<link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
 
-<!--table of users  -->
-    
 
-  <!-- delete popup -->
-
-  <!-- at this in to the while loop?? -->
   
   <div class="container w-full md:w-4/5  mx-auto px-2">
 
-		<!--Title-->
+	
 	
     <h1>ALL USERS</h1>  
 

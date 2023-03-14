@@ -64,24 +64,24 @@ echo $blogID;
 </div>
 
 <!-- Product List -->
-<section class="py-10 bg-gray-100">
+<section class="flex h-screen w-full items-center justify-center bg-gray-900  " style="background-image: url('<?= ROOT_DIR ?>assets/images/dimension.png')">
   <div class="mx-auto grid max-w-6xl  grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
   <?php while ($blog->fetch()): ?>
 
-  <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
+  <article class="rounded-xl border-2 border-white bg-black p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
       
         <div class="relative flex items-end overflow-hidden rounded-xl">
           <img src="<?= ROOT_DIR ?>assets/images/shows/<?= $imgPath ?>" alt="<?= $showName ?>" />
         </div>
 
         <div class="mt-1 p-2">
-          <h2 class="text-slate-700"><?= $blogTitle ?></h2>
-          <p class="mt-1 text-sm text-slate-400 blog-content">
+          <h2 class="text-white"><?= $blogTitle ?></h2>
+          <p class="mt-1 text-sm text-white blog-content">
             <?= $blogContent ?>
           </p>
 
           <div class="mt-3 flex items-end justify-between">
-            <div class="flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600">
+            <div class="flex items-center space-x-1.5 rounded-lg bg-yellow-400 px-4 py-1.5 text-white duration-100 hover:bg-blue-600">
              
             <button onclick="window.location.href='blogDetails/<?= $blogID ?>';" class="text-sm">READ MORE...</button>
 
