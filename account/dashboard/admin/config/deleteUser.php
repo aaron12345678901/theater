@@ -1,9 +1,16 @@
-<!-- 
+<?php
+    include '../../../auth/dbConfig.php';
 
-There is no nice way of doing this, as the setup of the tables is not the best, there is no connection to 
-all the albums of the user.
+    $userId = $_GET['uid'];
 
-You would have to write several queries to delele from individual tables.
+    $deleteComments = $conn->prepare('DELETE FROM comments WHERE fk_userBlog IN (SELECT id FROM userBlog WHERE fk_user_id = '.$userId.')');
+    $deleteUserBlog = $conn->prepare('DELETE FROM userBlog WHERE fk_user_id = '.$userId.'');
+    $deleteUser = $conn->prepare('DELETE FROM users WHERE users.id = '.$userId.' ');
 
-It highlight the importance of getting your table stucture correct before implimentation
- -->
+    $deleteComments->execute();
+    $deleteUserBlog->execute();
+    $deleteUser->execute();
+
+    header('Location: ../../../../a/allUsers');
+
+    ?>

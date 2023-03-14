@@ -3,7 +3,9 @@
 <?php include '../../../components/header.php'; ?>
   
   <?php include '../../../components/navigation.php'; ?>
-  <div class="px-3 md:lg:xl:px-40   border-t border-b py-20 bg-opacity-10" style="background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/dot-grid.png') ;">
+  <!-- <div class="px-3 md:lg:xl:px-40   border-t border-b py-20 bg-opacity-10"  style=" background-image: url('<?= ROOT_DIR ?>assets/images/dimension.png') ;"> -->
+  <div class="flex h-screen w-full items-center justify-center bg-gray-900  " style="background-image: url('<?= ROOT_DIR ?>assets/images/dimension.png')">
+
         <div onclick="window.location.href='pages/user.php';" class="grid grid-cols-1 md:lg:xl:grid-cols-3 group bg-white shadow-xl shadow-neutral-100 border ">
             <div
                 class="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
