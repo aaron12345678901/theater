@@ -4,7 +4,7 @@
     include '../../../../components/navigation.php'; 
     // echo $_SESSION['id'];
 ?>
-<section class=" py-1 bg-blueGray-50">
+<section class=" py-1 bg-black" style="background-image: url('<?= ROOT_DIR ?>assets/images/dimension.png')">
 <div class="w-full lg:w-8/12 px-4 mx-auto mt-6">
   <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
     <div class="rounded-t bg-white mb-0 px-6 py-6">
@@ -15,9 +15,7 @@
     </div>
     <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
       <form action="../account/dashboard/admin/config/addBlogConfig.php" method="post" enctype="multipart/form-data" >
-        <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
-          Blog Information
-        </h6>
+       
         <div class="flex flex-wrap">
           <div class="w-full lg:w-6/12 px-4">
             <div class="relative w-full mb-3">
@@ -69,7 +67,7 @@
             </div>
           </div>
         </div>
-        <input type="submit" name="submit" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
+        <input type="submit" name="submit" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-black bg-yellow-400  rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
           
         <hr class="mt-6 border-b-1 border-blueGray-300">
 
