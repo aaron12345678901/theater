@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 14, 2023 at 10:07 AM
+-- Generation Time: Mar 21, 2023 at 12:46 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -42,8 +42,10 @@ CREATE TABLE `blog` (
 --
 
 INSERT INTO `blog` (`id`, `title`, `blog_content`, `created_on`, `img_path`, `show_name`, `published`) VALUES
-(8, 'Pretty Woman', 'Aimie Atkinson plays Vivian as wholesome but slightly harder-faced than Julia Roberts and does not have the latter’s all-eclipsing ebullience. Her romance with Danny Mac, as Edward, feels undercharged and, if anything, suggests the transactional relationship between an emotionally distant rich man and a sex worker. Discomforting lines emerge in songs: “I’ll be a hooker in a raincoat,” she says to Edward when he makes her look respectable on entering his upmarket hotel. “He will want to see you with your buttons undone,” a character sings, in another bilious moment.', '2023-03-05', 'pretty_woman.jpeg', 'Mary Poppins', 0),
-(13, 'Shrek is Back!', 'The chief appeal of the show lies in the fact that it reverses Oscar Wilde\'s dictum that \"it is better to be beautiful than to be good\". What it proves is that there is hope for all of us, however ill-favoured.\n\nAnd, even if the musical underplays Shrek\'s initial ferocity and Fiona\'s nocturnal transformation into witchy ugliness, it retains the movie\'s humour.\n\nGazing at the soaring, perpendicular towers of Farquaad\'s castle, Shrek enquires: \"Do you think he might be compensating for something?\" And, asked by the impatient Fiona if he has slain the fire-breathing dragon, Shrek evasively replies: \"It\'s on my to-do list.\"', '2023-03-06', 'shrek_the_movie.jpeg', 'Shrek the Movie', 0);
+(8, 'Pretty Woman', 'Aimie Atkinson plays Vivian as wholesome but slightly harder-faced than Julia Roberts and does not have the latter’s all-eclipsing ebullience. Her romance with Danny Mac, as Edward, feels undercharged and, if anything, suggests the transactional relationship between an emotionally distant rich man and a sex worker. Discomforting lines emerge in songs: “I’ll be a hooker in a raincoat,” she says to Edward when he makes her look respectable on entering his upmarket hotel. “He will want to see you with your buttons undone,” a character sings, in another bilious moment.', '2023-03-05', 'pretty_woman.jpeg', 'Mary Poppins', 1),
+(13, 'Shrek is Back!', 'The chief appeal of the show lies in the fact that it reverses Oscar Wilde\'s dictum that \"it is better to be beautiful than to be good\". What it proves is that there is hope for all of us, however ill-favoured.\n\nAnd, even if the musical underplays Shrek\'s initial ferocity and Fiona\'s nocturnal transformation into witchy ugliness, it retains the movie\'s humour.\n\nGazing at the soaring, perpendicular towers of Farquaad\'s castle, Shrek enquires: \"Do you think he might be compensating for something?\" And, asked by the impatient Fiona if he has slain the fire-breathing dragon, Shrek evasively replies: \"It\'s on my to-do list.\"', '2023-03-06', 'shrek_the_movie.jpeg', 'Shrek the Movie', 1),
+(19, 'As expected', 'ife of Pi had a first life as a Booker prize-winning novel by Yann Martel and a second as an Oscar-winning film by Ang Lee. Both were utterly captivating. Now comes playwright Lolita Chakrabarti’s stage spectacular (first presented in Sheffield in 2019) about Piscine “Pi” Patel, the zookeeper’s son from Pondicherry who claims to have survived a shipwreck in a life-raft with a Bengal tiger in tow.\r\n\r\nThe magic here lies firmly in aesthetics, from the teeming menagerie of large-scale puppets, exquisitely designed by Nick Barnes and Finn Caldwell, to visual effects that surge, dazzle and undulate like ocean waves (stage design by Tim Hatle', '2023-03-20', 'life_of_pi.jpeg', 'Life of pi', 1),
+(20, 'The revival of Annie is fabulous', 'This revival of \"Annie\" is fabulous. Creatively staged by James Lapine, Stephen Sondheim\'s longtime collaborator, and smartly cast from top to bottom, it makes a convincing case for a musical widely regarded by cynical adults as suitable only for consumption by the very, very young. Even if you\'re a child-hating curmudgeon, you\'ll come home grinning in spite of yourself.', '2023-03-20', 'annie.jpeg', 'Annie', 1);
 
 -- --------------------------------------------------------
 
@@ -89,7 +91,9 @@ INSERT INTO `userblog` (`id`, `fk_user_id`, `fk_blog_id`) VALUES
 (26, 14, 13),
 (28, 14, 8),
 (33, 21, 8),
-(34, 21, 13);
+(34, 21, 13),
+(44, 14, 19),
+(45, 14, 20);
 
 -- --------------------------------------------------------
 
@@ -153,8 +157,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `comments`
 --
@@ -165,7 +168,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `userblog`
 --
 ALTER TABLE `userblog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `users`
