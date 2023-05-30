@@ -41,5 +41,6 @@ RewriteRule ^a/deleteUserConfirm/([0-9]+)$ account/dashboard/admin/config/delete
 RewriteRule ^a/deactivateUser/([0-9]+)$ account/dashboard/admin/config/deactivateUser.php?uid=$1 [L]
 RewriteRule ^a/activateUser/([0-9]+)$ account/dashboard/admin/config/activateUser.php?uid=$1 [L]
 RewriteRule ^a/editUser/([0-9]+)$ account/dashboard/admin/pages/editUser.php?uid=$1 [L]
+RewriteRule ^a/updateUser/([0-9]+)$ account/dashboard/admin/config/editUserConfig.php?uid=$1 [L]
 
 
